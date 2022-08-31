@@ -13,25 +13,6 @@
         WindowStyle="ToolWindow"
         ResizeMode="NoResize">
 
-    <Window.Resources>
-
-        <Style TargetType="{x:Type Button}">
-            <Setter Property="Margin" Value="3"/>
-            <Setter Property="Padding" Value="10 3 10 3"/>
-        </Style>
-
-        <Style TargetType="{x:Type GroupBox}">
-            <Setter Property="Margin" Value="3"/>
-            <Setter Property="Padding" Value="2"/>
-        </Style>
-
-        <Style TargetType="{x:Type TextBox}">
-            <Setter Property="Height" Value="25"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-        </Style>
-
-    </Window.Resources>
-
     <Window.DataContext>
         <viewmodels:AddPostViewModel/>
     </Window.DataContext>

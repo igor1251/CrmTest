@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\obj\Debug\net6.0-windows\
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Wpf\obj\Debug\net6.0-windows\
 CRM.Wpf
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\App.xaml
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Wpf\App.xaml
 5-87271074
 
-12-906420780
-207-1024489750
+13-1162797971
+207-1642993436
 Views\AddCompanyWindow.xaml;Views\AddDepartmentWindow.xaml;Views\AddPostWindow.xaml;Views\AddStaffWindow.xaml;Views\CrmWindow.xaml;
 
 False

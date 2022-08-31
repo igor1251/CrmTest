@@ -3,10 +3,67 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CRM.Wpf.Views"
+        xmlns:local="clr-namespace:CRM.Wpf.Views" 
+        xmlns:viewmodels="clr-namespace:CRM.Wpf.ViewModels"
         mc:Ignorable="d"
-        Title="AddStaffWindow" Height="450" Width="800">
+        Title="Новый сотрудник" 
+        Width="500"
+        SizeToContent="Height"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize">
+
+    <Window.DataContext>
+        <viewmodels:AddStaffViewModel/>
+    </Window.DataContext>
+    
     <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="Фамилия" Grid.Row="0" Grid.Column="0">
+            <TextBox Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}"/>
+        </GroupBox>
+        <GroupBox Header="Имя" Grid.Row="1" Grid.Column="0">
+            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
+        </GroupBox>
+        <GroupBox Header="Отчество" Grid.Row="2" Grid.Column="0">
+            <TextBox Text="{Binding Lastname, UpdateSourceTrigger=PropertyChanged}"/>
+        </GroupBox>
+        <GroupBox Header="Дата рождения" Grid.Row="0" Grid.Column="1">
+            <DatePicker SelectedDate="{Binding Birthdate}"/>
+        </GroupBox>
+        <GroupBox Header="Дата найма" Grid.Row="1" Grid.Column="1">
+            <DatePicker SelectedDate="{Binding Hireddate}"/>
+        </GroupBox>
+        <GroupBox Header="Заработная плата" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+            <TextBox Text="{Binding Money, UpdateSourceTrigger=PropertyChanged}"/>
+        </GroupBox>
+        <GroupBox Header="Должность" Grid.Row="2" Grid.Column="1">
+            <ComboBox ItemsSource="{Binding Posts}" SelectedItem="{Binding Post}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding DisplayName}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </GroupBox>
         
+        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Принять" Command="{Binding AcceptCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}" IsEnabled="{Binding AcceptAllowed}"/>
+            <Button Content="Отмена" Command="{Binding CancelCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}"/>
+        </StackPanel>
+
     </Grid>
+    
 </Window>

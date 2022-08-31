@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Qi5C1mHJkHk3c0Nnwf6EcGKdLiS8eyknr+QU0/kJ0dBX+Hrhw9R51AIjX+th8ugvZiaL6oCtweEzLVqntoQC+g==",
+  "dgSpecHash": "Qq1ZWC5P5/mJxxHsN6Pf764gkDeXlAJ5CjqCczi2Hzesi+bx37hLkYehZlp0wdVj7dbo+2rVdbQKxYh6dyvo6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\babichev.i\\source\\repos\\CRM\\CRM.Wpf\\CRM.Wpf.csproj",
+  "projectFilePath": "C:\\Users\\babichev.i\\Documents\\GitHub\\CrmTest\\CRM\\CRM.Wpf\\CRM.Wpf.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\babichev.i\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\babichev.i\\.nuget\\packages\\dynamicdata\\7.9.5\\dynamicdata.7.9.5.nupkg.sha512",

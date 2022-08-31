@@ -1587,11 +1587,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\babichev.i\\source\\repos\\CRM\\CRM.Wpf\\CRM.Wpf.csproj",
+      "projectUniqueName": "C:\\Users\\babichev.i\\Documents\\GitHub\\CrmTest\\CRM\\CRM.Wpf\\CRM.Wpf.csproj",
       "projectName": "CRM.Wpf",
-      "projectPath": "C:\\Users\\babichev.i\\source\\repos\\CRM\\CRM.Wpf\\CRM.Wpf.csproj",
+      "projectPath": "C:\\Users\\babichev.i\\Documents\\GitHub\\CrmTest\\CRM\\CRM.Wpf\\CRM.Wpf.csproj",
       "packagesPath": "C:\\Users\\babichev.i\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\babichev.i\\source\\repos\\CRM\\CRM.Wpf\\obj\\",
+      "outputPath": "C:\\Users\\babichev.i\\Documents\\GitHub\\CrmTest\\CRM\\CRM.Wpf\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1613,8 +1613,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\babichev.i\\source\\repos\\CRM\\CRM.Core\\CRM.Core.csproj": {
-              "projectPath": "C:\\Users\\babichev.i\\source\\repos\\CRM\\CRM.Core\\CRM.Core.csproj"
+            "C:\\Users\\babichev.i\\Documents\\GitHub\\CrmTest\\CRM\\CRM.Core\\CRM.Core.csproj": {
+              "projectPath": "C:\\Users\\babichev.i\\Documents\\GitHub\\CrmTest\\CRM\\CRM.Core\\CRM.Core.csproj"
             }
           }
         }

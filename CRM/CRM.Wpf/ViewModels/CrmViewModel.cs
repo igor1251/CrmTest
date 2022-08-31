@@ -44,8 +44,8 @@ namespace CRM.Wpf.ViewModels
 
         public ReactiveCommand<object, Unit> CloseWindowCommand => closeWindowCommand ??= ReactiveCommand.Create<object>(CloseWindow);
         public ICommand? AddCompanyCommand => addCompanyCommand ??= ReactiveCommand.CreateFromTask(AddCompany);
-        public ICommand? AddDepartmentCommand => addDepartmentCommand ??= ReactiveCommand.Create(AddDepartment);
-        public ICommand? AddStaffCommand => addStaffCommand ??= ReactiveCommand.Create(AddStaff);
+        public ICommand? AddDepartmentCommand => addDepartmentCommand ??= ReactiveCommand.CreateFromTask(AddDepartment);
+        public ICommand? AddStaffCommand => addStaffCommand ??= ReactiveCommand.CreateFromTask(AddStaff);
         public ICommand? AddPostCommand => addPostCommand ??= ReactiveCommand.CreateFromTask(AddPost);
 
         #endregion
@@ -73,14 +73,26 @@ namespace CRM.Wpf.ViewModels
             }
         }
 
-        void AddDepartment()
+        async Task AddDepartment()
         {
-            MessageBox.Show("Add department clicked");
+            var dialog = new AddDepartmentWindow();
+            var dialogResult = dialog.ShowDialog() ?? false;
+            if (dialogResult)
+            {
+                var newDepartment = dialog.GetDepartment();
+                await repo.InsertDepartmentAsync(newDepartment);
+            }
         }
 
-        void AddStaff()
+        async Task AddStaff()
         {
-            MessageBox.Show("Add staff clicked");
+            var dialog = new AddStaffWindow();
+            var dialogResult = dialog.ShowDialog() ?? false;
+            if (dialogResult)
+            {
+                var newStaff = dialog.GetStaff();
+                await repo.InsertStaffAsync(newStaff);
+            }
         }
 
         async Task AddPost()

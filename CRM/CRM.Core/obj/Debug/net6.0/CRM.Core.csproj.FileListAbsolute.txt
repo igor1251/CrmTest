@@ -12,3 +12,17 @@ C:\Users\babichev.i\source\repos\CRM\CRM.Core\obj\Debug\net6.0\refint\CRM.Core.d
 C:\Users\babichev.i\source\repos\CRM\CRM.Core\obj\Debug\net6.0\CRM.Core.pdb
 C:\Users\babichev.i\source\repos\CRM\CRM.Core\obj\Debug\net6.0\CRM.Core.genruntimeconfig.cache
 C:\Users\babichev.i\source\repos\CRM\CRM.Core\obj\Debug\net6.0\ref\CRM.Core.dll
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\bin\Debug\net6.0\CRM.Core.deps.json
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\bin\Debug\net6.0\CRM.Core.runtimeconfig.json
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\bin\Debug\net6.0\CRM.Core.dll
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\bin\Debug\net6.0\CRM.Core.pdb
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\obj\Debug\net6.0\CRM.Core.csproj.AssemblyReference.cache
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\obj\Debug\net6.0\CRM.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\obj\Debug\net6.0\CRM.Core.AssemblyInfoInputs.cache
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\obj\Debug\net6.0\CRM.Core.AssemblyInfo.cs
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\obj\Debug\net6.0\CRM.Core.csproj.CoreCompileInputs.cache
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\obj\Debug\net6.0\CRM.Core.dll
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\obj\Debug\net6.0\refint\CRM.Core.dll
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\obj\Debug\net6.0\CRM.Core.pdb
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\obj\Debug\net6.0\CRM.Core.genruntimeconfig.cache
+C:\Users\babichev.i\Documents\GitHub\CrmTest\CRM\CRM.Core\obj\Debug\net6.0\ref\CRM.Core.dll
