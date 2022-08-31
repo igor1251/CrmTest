@@ -8,7 +8,8 @@
         mc:Ignorable="d"
         Title="Crm" 
         Height="450" 
-        Width="800">
+        Width="800"
+        WindowStartupLocation="CenterScreen">
     
     <Window.DataContext>
         <viewmodels:CrmViewModel/>
@@ -39,6 +40,7 @@
                     <MenuItem Header="Компанию" Command="{Binding AddCompanyCommand}"/>
                     <MenuItem Header="Подразделение" Command="{Binding AddDepartmentCommand}"/>
                     <MenuItem Header="Сотрудника" Command="{Binding AddStaffCommand}"/>
+                    <MenuItem Header="Должность" Command="{Binding AddPostCommand}"/>
                 </MenuItem>
             </MenuItem>
         

@@ -22,12 +22,13 @@ namespace CRM.Core.Services
 
         async Task LogAsync(LogMessageType type, string message)
         {
-            var messageType = "[ EXECUTING ]";
+            string? messageType;
             switch (type)
             {
                 case LogMessageType.Error: messageType = "[ ERROR ]"; break;
                 case LogMessageType.Warning: messageType = "[ WARNING ]"; break;
                 case LogMessageType.Success: messageType = "[ SUCCESS ]"; break;
+                default: messageType = "[ EXECUTING ]"; break;
             }
             await File.AppendAllTextAsync(logPath, $"{messageType}\t{DateTime.Now}\t{message}\n");
         }
@@ -104,7 +105,6 @@ namespace CRM.Core.Services
             {
                 await dbConnection.ExecuteAsync(Queries.InsertCompany, new
                 {
-                    Id = company.Id,
                     Name = company.Name,
                     LunticDate = company.LunticDate,
                     PaperAddress = company.PaperAddress,
@@ -119,7 +119,6 @@ namespace CRM.Core.Services
             {
                 await dbConnection.ExecuteAsync(Queries.InsertDepartment, new
                 {
-                    Id = department.Id,
                     Name = department.Name,
                     MasterId = department.Master.Id,
                 });
@@ -133,7 +132,6 @@ namespace CRM.Core.Services
             {
                 await dbConnection.ExecuteAsync(Queries.InsertStaff, new
                 {
-                    Id = staff.Id,
                     Name = staff.Name,
                     Surname = staff.Surname,
                     Lastname = staff.Lastname,
@@ -143,6 +141,18 @@ namespace CRM.Core.Services
                 });
             },
             $"Inserting new staff: \"{staff.Info.Replace("\n", "; ")}\"");
+        }
+
+        public async Task InsertPostAsync(Post post)
+        {
+            await InvokeAsync(async () =>
+            {
+                await dbConnection.ExecuteAsync(Queries.InsertPost, new
+                {
+                    Name = post.Name,
+                });
+            },
+            $"Inserting new post: \"{post.Info.Replace("\n", "; ")}\"");
         }
     }
 }

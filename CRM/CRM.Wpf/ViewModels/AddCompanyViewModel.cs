@@ -18,14 +18,13 @@ using System.Windows.Input;
 
 namespace CRM.Wpf.ViewModels
 {
-    public class AddCompanyViewModel : ReactiveObject
+    public class AddCompanyViewModel : Default
     {
         #region Definitions
         
         string address = string.Empty, name = string.Empty;
         DateTime selectedDate = DateTime.Today;
         readonly ObservableAsPropertyHelper<bool> acceptAllowed;
-        ICommand? acceptCommand, cancelCommand;
 
         #endregion
 
@@ -55,24 +54,12 @@ namespace CRM.Wpf.ViewModels
 
         #endregion
 
-        #region Commands
-
-        public ICommand? AcceptCommand => acceptCommand ??= ReactiveCommand.Create<Window>(Accept);
-        public ICommand? CancelCommand => cancelCommand ??= ReactiveCommand.Create<Window>(Cancel);
-
-        #endregion
-
         #region Auxiliary methods
 
-        void Accept(Window window)
+        public override void Accept(Window window)
         {
             CreatedCompany = new Company(0, Name, SelectedDate, Address, new List<Department>());
             window.DialogResult = true;
-        }
-
-        void Cancel(Window window)
-        {
-            window.DialogResult = false;
         }
 
         #endregion

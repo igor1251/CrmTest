@@ -25,7 +25,7 @@ namespace CRM.Wpf.ViewModels
         readonly CrmRepo repo = new();
         IDefault? selectedItem;
         ReactiveCommand<object, Unit>? closeWindowCommand;
-        ICommand? addCompanyCommand, addDepartmentCommand, addStaffCommand;
+        ICommand? addCompanyCommand, addDepartmentCommand, addStaffCommand, addPostCommand;
 
         #endregion
 
@@ -46,6 +46,7 @@ namespace CRM.Wpf.ViewModels
         public ICommand? AddCompanyCommand => addCompanyCommand ??= ReactiveCommand.CreateFromTask(AddCompany);
         public ICommand? AddDepartmentCommand => addDepartmentCommand ??= ReactiveCommand.Create(AddDepartment);
         public ICommand? AddStaffCommand => addStaffCommand ??= ReactiveCommand.Create(AddStaff);
+        public ICommand? AddPostCommand => addPostCommand ??= ReactiveCommand.CreateFromTask(AddPost);
 
         #endregion
 
@@ -80,6 +81,17 @@ namespace CRM.Wpf.ViewModels
         void AddStaff()
         {
             MessageBox.Show("Add staff clicked");
+        }
+
+        async Task AddPost()
+        {
+            var dialog = new AddPostWindow();
+            var dialogResult = dialog.ShowDialog() ?? false;
+            if (dialogResult)
+            {
+                var newPost = dialog.GetPost();
+                await repo.InsertPostAsync(newPost);
+            }
         }
 
         #endregion

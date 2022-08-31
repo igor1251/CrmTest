@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\App.xaml
-2-493452705
+5-87271074
 
-664850678
+12-906420780
 207-1024489750
-Views\AddCompanyWindow.xaml;Views\CrmWindow.xaml;
+Views\AddCompanyWindow.xaml;Views\AddDepartmentWindow.xaml;Views\AddPostWindow.xaml;Views\AddStaffWindow.xaml;Views\CrmWindow.xaml;
 
 False
 

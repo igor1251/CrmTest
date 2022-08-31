@@ -48,3 +48,9 @@ C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\obj\Debug\net6.0-windows\Views\AddC
 C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\obj\Debug\net6.0-windows\Views\CrmWindow.g.cs
 C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\obj\Debug\net6.0-windows\Views\AddCompanyWindow.baml
 C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\obj\Debug\net6.0-windows\Views\CrmWindow.baml
+C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\obj\Debug\net6.0-windows\Views\AddDepartmentWindow.g.cs
+C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\obj\Debug\net6.0-windows\Views\AddPostWindow.g.cs
+C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\obj\Debug\net6.0-windows\Views\AddStaffWindow.g.cs
+C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\obj\Debug\net6.0-windows\Views\AddDepartmentWindow.baml
+C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\obj\Debug\net6.0-windows\Views\AddPostWindow.baml
+C:\Users\babichev.i\source\repos\CRM\CRM.Wpf\obj\Debug\net6.0-windows\Views\AddStaffWindow.baml

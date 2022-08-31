@@ -2,3 +2,11 @@
 [ EXECUTING ]	31.08.2022 13:25:33	Done.
 [ EXECUTING ]	31.08.2022 13:26:03	Inserting new company: "Id: 0; Name: test; DisplayName: test (0); LunticDate: 31.08.2022 0:00:00; PaperAddress: test; "
 [ EXECUTING ]	31.08.2022 13:26:03	Done.
+[ EXECUTING ]	31.08.2022 15:44:20	Initializing repo....
+[ EXECUTING ]	31.08.2022 15:44:20	Done.
+[ EXECUTING ]	31.08.2022 15:49:20	Initializing repo....
+[ EXECUTING ]	31.08.2022 15:49:20	Done.
+[ EXECUTING ]	31.08.2022 16:05:20	Initializing repo....
+[ EXECUTING ]	31.08.2022 16:05:20	Done.
+[ EXECUTING ]	31.08.2022 16:06:12	Inserting new post: "Id: 0; Name: new test; DisplayName: new test (0); "
+[ EXECUTING ]	31.08.2022 16:06:12	Done.
