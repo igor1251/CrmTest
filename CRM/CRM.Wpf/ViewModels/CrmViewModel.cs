@@ -24,8 +24,7 @@ namespace CRM.Wpf.ViewModels
         
         readonly CrmRepo repo = new();
         IDefault? selectedItem;
-        ReactiveCommand<object, Unit>? closeWindowCommand;
-        ICommand? addCompanyCommand, addDepartmentCommand, addStaffCommand, addPostCommand;
+        ICommand? addCompanyCommand, addDepartmentCommand, addStaffCommand, addPostCommand, closeWindowCommand;
 
         #endregion
 
@@ -42,7 +41,7 @@ namespace CRM.Wpf.ViewModels
 
         #region Commands
 
-        public ReactiveCommand<object, Unit> CloseWindowCommand => closeWindowCommand ??= ReactiveCommand.Create<object>(CloseWindow);
+        public ICommand? CloseWindowCommand => closeWindowCommand ??= ReactiveCommand.Create<Window>(CloseWindow);
         public ICommand? AddCompanyCommand => addCompanyCommand ??= ReactiveCommand.CreateFromTask(AddCompany);
         public ICommand? AddDepartmentCommand => addDepartmentCommand ??= ReactiveCommand.CreateFromTask(AddDepartment);
         public ICommand? AddStaffCommand => addStaffCommand ??= ReactiveCommand.CreateFromTask(AddStaff);
@@ -52,14 +51,16 @@ namespace CRM.Wpf.ViewModels
 
         #region Auxiliary methods
 
-        async void PrepareServices()
+        async void Prepare()
         {
             await repo.InitRepoAsync();
+            var data = await repo.LoadCompaniesAsync();
+            if (data != null) Companies.AddRange(data);
         }
 
-        void CloseWindow(object window)
+        void CloseWindow(Window window)
         {
-            ((Window)window).Close();
+            window.Close();
         }
 
         async Task AddCompany()
@@ -112,33 +113,11 @@ namespace CRM.Wpf.ViewModels
 
         public CrmViewModel()
         {
-            PrepareServices();
+            Prepare();
 
             Companies = new ObservableCollectionExtended<Company>();
             Companies.ToObservableChangeSet()
                      .Subscribe();
-
-            List<Staff> slaves = new()
-            {
-                new Staff(1, "test", "test", "test", DateTime.Today, DateTime.Today, null, 0),
-                new Staff(2, "test1", "test1", "test1", DateTime.Today, DateTime.Today, null, 0),
-            };
-
-            List<Staff> slaves2 = new()
-            {
-                new Staff(1, "test2", "test2", "test2", DateTime.Today, DateTime.Today, null, 0),
-                new Staff(2, "test3", "test3", "test3", DateTime.Today, DateTime.Today, null, 0),
-                new Staff(2, "test4", "test4", "test4", DateTime.Today, DateTime.Today, null, 0),
-                new Staff(2, "test4", "test5", "test5", DateTime.Today, DateTime.Today, null, 0),
-            };
-
-            List<Department> departments = new()
-            {
-                new Department(1, "dep1", slaves.First(), slaves),
-                new Department(2, "dep2", slaves2.First(), slaves2),
-            };
-
-            Companies.Add(new Company(1, "test", DateTime.Today, "-", departments));
         }
 
         #endregion
